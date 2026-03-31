@@ -7,12 +7,12 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div style={{ overflow: 'hidden' }}>
+    <div> {/* <-- SIN overflow: hidden aquí */}
       <Navbar />
-      <Hero />
-      <WeAreDifferent />
-      <ProductGrid />
-      <Footer />
+      <section id="inicio"><Hero /></section>
+      <section id="diferente"><WeAreDifferent /></section>
+      <section id="menu"><ProductGrid /></section>
+      <section id="contacto"><Footer /></section>
     </div>
   );
 }

@@ -17,6 +17,7 @@ export const Hero = () => {
       padding: '0 10%',
       position: 'relative'
     }}>
+      {/* Overlay para que el texto resalte sobre la imagen */}
       <div style={{
         position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
         backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 1
@@ -42,26 +43,31 @@ export const Hero = () => {
           "Pequeños detalles, grandes momentos"
         </p>
         <div style={{ display: 'flex', gap: '20px' }}>
-          <button style={{
-            backgroundColor: 'var(--color-verde-oliva)',
-            color: 'var(--color-blanco)',
-            border: 'none',
-            padding: '15px 30px',
-            borderRadius: '8px',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-            fontSize: '16px'
-          }}>Ver Menú</button>
-          <button style={{
-            backgroundColor: 'rgba(255,255,255,0.2)',
-            color: 'var(--color-blanco)',
-            border: '1px solid rgba(255,255,255,0.4)',
-            padding: '15px 30px',
-            borderRadius: '8px',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-            fontSize: '16px'
-          }}>Contáctanos</button>
+          {/* Link al menú */}
+          <a href="#menu" style={{ textDecoration: 'none' }}>
+            <button style={{
+              backgroundColor: 'var(--color-verde-oliva)',
+              color: 'var(--color-blanco)',
+              border: 'none',
+              padding: '15px 30px',
+              borderRadius: '8px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              fontSize: '16px'
+            }}>Ver Menú</button>
+          </a>
+          <a href="#contacto" style={{ textDecoration: 'none' }}>
+            <button style={{
+              backgroundColor: 'rgba(255,255,255,0.2)',
+              color: 'var(--color-blanco)',
+              border: '1px solid rgba(255,255,255,0.4)',
+              padding: '15px 30px',
+              borderRadius: '8px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              fontSize: '16px'
+            }}>Contáctanos</button>
+          </a>
         </div>
       </div>
     </header>

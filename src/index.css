@@ -2,9 +2,20 @@
 
 :root {
   --color-blanco: #FFFFFF;
-  --color-verde-oliva: #6B8E23; /* Tono oliva rico */
+  --color-verde-oliva: #6B8E23;
   --color-beige: #F5F5DC;
   --color-negro: #1A1A1A;
+  --nav-height: 70px; /* Altura estimada de tu Navbar */
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Evita que el Navbar fijo tape los títulos al scrollear */
+#inicio, #diferente, #menu, #contacto {
+  scroll-margin-top: var(--nav-height);
 }
 
 * {
@@ -18,16 +29,42 @@ body {
   background-color: var(--color-beige);
   color: var(--color-negro);
   line-height: 1.6;
+  overflow-x: hidden; /* Evita scroll horizontal accidental */
 }
 
-/* Tipografía de Lujo para Títulos */
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   color: var(--color-negro);
   font-weight: 700;
 }
 
-/* Utilidad para el truncado responsivo de texto (2 líneas en móvil, full en PC) */
+/* LÓGICA DEL NAVBAR: Responsividad */
+.nav-desktop {
+  display: none; 
+}
+
+@media (min-width: 992px) {
+  .nav-desktop {
+    display: flex;
+  }
+  .nav-mobile-btn {
+    display: none;
+  }
+}
+
+/* Animación de entrada para el menú móvil */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(-10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Truncado de texto (2 líneas en móvil, completo en PC) */
 .text-truncate-mobile {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -37,15 +74,17 @@ h1, h2, h3, h4 {
 
 @media (min-width: 768px) {
   .text-truncate-mobile {
-    -webkit-line-clamp: unset; /* En PC se ve todo */
+    -webkit-line-clamp: unset;
   }
 }
 
-/* Animaciones sutiles */
+/* Animaciones de las tarjetas de productos */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  cursor: pointer;
 }
+
 .card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(107, 142, 35, 0.15); /* Sombra oliva suave */
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(107, 142, 35, 0.2);
 }
