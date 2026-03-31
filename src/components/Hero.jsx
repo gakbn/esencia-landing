@@ -1,10 +1,14 @@
 import React from 'react';
+// Importamos ambos para que los tengas a la mano
+import imgFondo from '../assets/fondo.jpg';
+import imgFondo2 from '../assets/fondo2.jpg';
 
 export const Hero = () => {
   return (
     <header id="inicio" style={{ 
       height: '100vh', 
-      backgroundImage: 'url(/src/assets/fondo2.jpg)', // Usando tu imagen
+      // Aquí usamos imgFondo (fondo.jpg)
+      backgroundImage: `url(${imgFondo})`, 
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       display: 'flex',
@@ -13,13 +17,11 @@ export const Hero = () => {
       padding: '0 10%',
       position: 'relative'
     }}>
-      {/* Overlay oscuro para legibilidad - Replica la imagen */}
       <div style={{
         position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
         backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 1
       }} />
 
-      {/* Contenido de texto - Replica la tipografía y layout */}
       <div style={{ zIndex: 10, maxWidth: '600px', color: 'var(--color-blanco)' }}>
         <h1 style={{ 
           color: 'var(--color-blanco)', 

@@ -1,11 +1,14 @@
 import React from 'react';
+// Importamos ambos también aquí
+import imgFondo from '../assets/fondo.jpg';
+import imgFondo2 from '../assets/fondo2.jpg';
 
 export const WeAreDifferent = () => {
   const cards = [
-    { title: "Artesanal", icon: "Whisk", text: "Hechos con dedicación y técnicas gourmet." },
-    { title: "Estético", icon: "Star", text: "Presentación elegante para deleitar." },
-    { title: "Atención", icon: "Person", text: "Personalizada y adaptada a tu evento." },
-    { title: "Experiencia", icon: "Sparkles", text: "Única y memorable en cada pedido." }
+    { title: "Artesanal", icon: "★", text: "Hechos con dedicación y técnicas gourmet." },
+    { title: "Estético", icon: "★", text: "Presentación elegante para deleitar." },
+    { title: "Atención", icon: "★", text: "Personalizada y adaptada a tu evento." },
+    { title: "Experiencia", icon: "★", text: "Única y memorable en cada pedido." }
   ];
 
   return (
@@ -16,14 +19,13 @@ export const WeAreDifferent = () => {
         gap: '60px',
         alignItems: 'center'
       }}>
-        {/* Imagen de la izquierda - Replica la imagen */}
         <div>
-          <img src="/src/assets/fondo2.jpg" alt="Esencia Detalle" style={{
+          {/* Aquí usamos imgFondo2 (fondo2.jpg) */}
+          <img src={imgFondo2} alt="Esencia Detalle" style={{
             width: '100%', borderRadius: '20px', boxShadow: '0 15px 40px rgba(0,0,0,0.1)'
           }} />
         </div>
 
-        {/* Texto y Grid de tarjetas de la derecha */}
         <div>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '15px' }}>
             Nuestra ESENCIA es <br /> <span style={{ fontStyle: 'italic', fontWeight: '400' }}>DIFERENTE</span>
@@ -52,7 +54,7 @@ export const WeAreDifferent = () => {
                   borderRadius: '10px',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: '24px', marginBottom: '15px'
-                }}>{/* Aquí iría un icono */} ★</div>
+                }}>{card.icon}</div>
                 <h4 style={{ color: 'var(--color-negro)', marginBottom: '8px' }}>{card.title}</h4>
                 <p style={{ fontSize: '14px', color: '#666', lineHeight: '1.4' }}>{card.text}</p>
               </div>
