@@ -14,7 +14,7 @@ export const Hero = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      padding: '0 10%',
+      padding: '0 6%',
       position: 'relative'
     }}>
       {/* Overlay para que el texto resalte sobre la imagen */}
@@ -26,34 +26,34 @@ export const Hero = () => {
       <div style={{ zIndex: 10, maxWidth: '600px', color: 'var(--color-blanco)' }}>
         <h1 style={{ 
           color: 'var(--color-blanco)', 
-          fontSize: '4rem', 
+          fontSize: 'clamp(2rem, 6vw, 4rem)', 
           lineHeight: '1.2',
-          marginBottom: '20px',
-          letterSpacing: '3px'
+          marginBottom: '15px',
+          letterSpacing: 'clamp(1px, 0.3vw, 3px)'
         }}>
           CREA GRANDES <br /> MOMENTOS
         </h1>
         <p style={{ 
           color: 'var(--color-beige)', 
           fontStyle: 'italic', 
-          fontSize: '1.8rem',
+          fontSize: 'clamp(1rem, 3.5vw, 1.8rem)',
           fontWeight: '300',
-          marginBottom: '40px'
+          marginBottom: '30px'
         }}>
           "Pequeños detalles, grandes momentos"
         </p>
-        <div style={{ display: 'flex', gap: '20px' }}>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           {/* Link al menú */}
           <a href="#menu" style={{ textDecoration: 'none' }}>
             <button style={{
               backgroundColor: 'var(--color-verde-oliva)',
               color: 'var(--color-blanco)',
               border: 'none',
-              padding: '15px 30px',
+              padding: 'clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px)',
               borderRadius: '8px',
               fontWeight: 'bold',
               cursor: 'pointer',
-              fontSize: '16px'
+              fontSize: 'clamp(13px, 2vw, 16px)'
             }}>Ver Menú</button>
           </a>
           <a href="#contacto" style={{ textDecoration: 'none' }}>
@@ -61,11 +61,11 @@ export const Hero = () => {
               backgroundColor: 'rgba(255,255,255,0.2)',
               color: 'var(--color-blanco)',
               border: '1px solid rgba(255,255,255,0.4)',
-              padding: '15px 30px',
+              padding: 'clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px)',
               borderRadius: '8px',
               fontWeight: 'bold',
               cursor: 'pointer',
-              fontSize: '16px'
+              fontSize: 'clamp(13px, 2vw, 16px)'
             }}>Contáctanos</button>
           </a>
         </div>

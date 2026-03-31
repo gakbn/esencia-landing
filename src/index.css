@@ -2,7 +2,7 @@
 
 :root {
   --color-blanco: #FFFFFF;
-  --color-verde-oliva: #6B8E23;
+  --color-verde-oliva: #525430;
   --color-beige: #F5F5DC;
   --color-negro: #1A1A1A;
   --nav-height: 70px; /* Altura estimada de tu Navbar */
@@ -14,7 +14,7 @@ html {
 }
 
 /* Evita que el Navbar fijo tape los títulos al scrollear */
-#inicio, #diferente, #menu, #contacto {
+#inicio, #diferente, #promesa, #menu, #contacto {
   scroll-margin-top: var(--nav-height);
 }
 
@@ -48,7 +48,13 @@ h1, h2, h3, h4 {
     display: flex;
   }
   .nav-mobile-btn {
-    display: none;
+    display: none !important;
+  }
+  .nav-mobile-overlay {
+    display: none !important;
+  }
+  .nav-mobile-panel {
+    display: none !important;
   }
 }
 
@@ -62,6 +68,37 @@ h1, h2, h3, h4 {
     opacity: 1; 
     transform: translateY(0); 
   }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Desktop nav link hover underline */
+.nav-link-desktop::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-verde-oliva);
+  transition: width 0.3s ease;
+}
+
+.nav-link-desktop:hover::after {
+  width: 100%;
+}
+
+.nav-link-desktop:hover {
+  color: var(--color-verde-oliva) !important;
 }
 
 /* Truncado de texto (2 líneas en móvil, completo en PC) */

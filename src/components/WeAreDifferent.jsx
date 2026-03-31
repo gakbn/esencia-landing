@@ -12,11 +12,11 @@ export const WeAreDifferent = () => {
   ];
 
   return (
-    <section id="nosotros" style={{ padding: '100px 10%' }}>
+    <section id="nosotros" style={{ padding: 'clamp(50px, 8vw, 100px) 6%' }}>
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '60px',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+        gap: 'clamp(30px, 5vw, 60px)',
         alignItems: 'center'
       }}>
         <div>
@@ -27,22 +27,22 @@ export const WeAreDifferent = () => {
         </div>
 
         <div>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '15px' }}>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 4vw, 2.5rem)', marginBottom: '15px' }}>
             Nuestra ESENCIA es <br /> <span style={{ fontStyle: 'italic', fontWeight: '400' }}>DIFERENTE</span>
           </h2>
-          <p style={{ color: '#555', marginBottom: '50px' }}>
+          <p style={{ color: '#555', marginBottom: 'clamp(25px, 5vw, 50px)', fontSize: 'clamp(0.85rem, 2vw, 1rem)' }}>
             Cuidamos cada detalle en sabor, presentación y calidad. Creamos experiencias únicas ideales para eventos y momentos especiales.
           </p>
 
           <div style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
-            gap: '30px'
+            gap: 'clamp(15px, 3vw, 30px)'
           }}>
             {cards.map((card, index) => (
               <div key={index} className="card-hover" style={{
                 backgroundColor: 'var(--color-blanco)',
-                padding: '25px',
+                padding: 'clamp(15px, 3vw, 25px)',
                 borderRadius: '15px',
                 border: '1px solid rgba(0,0,0,0.05)',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.03)'
@@ -56,7 +56,7 @@ export const WeAreDifferent = () => {
                   fontSize: '24px', marginBottom: '15px'
                 }}>{card.icon}</div>
                 <h4 style={{ color: 'var(--color-negro)', marginBottom: '8px' }}>{card.title}</h4>
-                <p style={{ fontSize: '14px', color: '#666', lineHeight: '1.4' }}>{card.text}</p>
+                <p style={{ fontSize: 'clamp(12px, 2vw, 14px)', color: '#666', lineHeight: '1.4' }}>{card.text}</p>
               </div>
             ))}
           </div>

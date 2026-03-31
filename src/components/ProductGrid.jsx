@@ -4,11 +4,11 @@ import { ProductCard } from './ProductCard';
 
 export const ProductGrid = () => {
   return (
-    <main id="menú" style={{ padding: '100px 10%' }}>
+    <main id="menú" style={{ padding: 'clamp(50px, 8vw, 100px) 6%' }}>
       <h2 style={{ 
         textAlign: 'center', 
-        marginBottom: '60px', 
-        fontSize: '3rem',
+        marginBottom: 'clamp(30px, 5vw, 60px)', 
+        fontSize: 'clamp(1.8rem, 5vw, 3rem)',
         color: 'var(--color-negro)' 
       }}>
         Nuestro Menú <br /> <span style={{ fontStyle: 'italic', fontWeight: '400' }}>Artesanal</span>
@@ -17,8 +17,8 @@ export const ProductGrid = () => {
       {/* Grid responsivo: Replicate the image. Se ajusta solo */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '35px',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+        gap: 'clamp(20px, 3vw, 35px)',
         alignItems: 'stretch'
       }}>
         {products.map(product => (

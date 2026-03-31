@@ -6,23 +6,23 @@ export const Footer = () => {
       backgroundColor: 'var(--color-negro)',
       color: 'var(--color-blanco)',
       textAlign: 'center',
-      padding: '80px 10%',
-      marginTop: '100px'
+      padding: 'clamp(40px, 8vw, 80px) 6%',
+      marginTop: 'clamp(50px, 8vw, 100px)'
     }}>
       <h2 style={{ 
         color: 'var(--color-blanco)', 
         marginBottom: '15px', 
-        fontSize: '2.5rem',
+        fontSize: 'clamp(1.8rem, 5vw, 2.5rem)',
         letterSpacing: '2px' 
       }}>ESENCIA</h2>
-      <p style={{ color: 'var(--color-beige)', fontStyle: 'italic', marginBottom: '40px', fontSize: '1.2rem' }}>Pequeños detalles, grandes momentos.</p>
+      <p style={{ color: 'var(--color-beige)', fontStyle: 'italic', marginBottom: 'clamp(20px, 5vw, 40px)', fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)' }}>Pequeños detalles, grandes momentos.</p>
       
       {/* Réplica de la estructura de enlaces de la imagen */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '40px',
-        marginBottom: '60px',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+        gap: 'clamp(20px, 4vw, 40px)',
+        marginBottom: 'clamp(30px, 5vw, 60px)',
         textAlign: 'left'
       }}>
         <div>

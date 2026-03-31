@@ -13,7 +13,7 @@ export const ProductCard = ({ product }) => {
       border: '1px solid rgba(0,0,0,0.05)',
       boxShadow: '0 8px 25px rgba(0,0,0,0.03)'
     }}>
-      <div style={{ position: 'relative', height: '240px' }}>
+      <div style={{ position: 'relative', height: 'clamp(180px, 30vw, 240px)' }}>
         <img 
           src={product.image} 
           alt={product.name} 
@@ -30,13 +30,13 @@ export const ProductCard = ({ product }) => {
         }}>Gourmet</div>
       </div>
       
-      <div style={{ padding: '25px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-        <h3 style={{ margin: '0 0 10px 0', fontSize: '1.4rem' }}>
+      <div style={{ padding: 'clamp(15px, 3vw, 25px)', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+        <h3 style={{ margin: '0 0 10px 0', fontSize: 'clamp(1rem, 2.5vw, 1.4rem)' }}>
           {product.name}
         </h3>
         
         {/* Lógica responsiva de truncado aquí - Replicate the requirement */}
-        <p className="text-truncate-mobile" style={{ fontSize: '14px', marginBottom: '15px', flexGrow: 1, color: '#555' }}>
+        <p className="text-truncate-mobile" style={{ fontSize: 'clamp(12px, 2vw, 14px)', marginBottom: '15px', flexGrow: 1, color: '#555' }}>
           {product.description}
         </p>
         
@@ -45,7 +45,7 @@ export const ProductCard = ({ product }) => {
           paddingTop: '15px',
           marginTop: 'auto',
           color: 'var(--color-verde-oliva)',
-          fontSize: '13px',
+          fontSize: 'clamp(11px, 2vw, 13px)',
           fontWeight: 'bold',
           textAlign: 'center'
         }}>
