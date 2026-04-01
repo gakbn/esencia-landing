@@ -7,7 +7,7 @@ export const ProductCard = ({ product }) => {
   const [selectedQty, setSelectedQty] = useState(1);
 
   return (
-    <div className="card-hover product-card" style={{
+    <div className="product-card" style={{
       borderRadius: '20px',
       overflow: 'hidden',
       display: 'flex',
