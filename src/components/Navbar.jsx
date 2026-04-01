@@ -40,10 +40,12 @@ export const Navbar = () => {
         backdropFilter: 'blur(12px)',
         transition: 'box-shadow 0.3s ease, background-color 0.3s ease',
       }}>
-        <div style={{
+        <a href="#inicio" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
+          textDecoration: 'none',
+          cursor: 'pointer',
         }}>
           <img src={logoImg} alt="Esencia Logo" style={{
             height: '38px',
@@ -59,7 +61,7 @@ export const Navbar = () => {
           }}>
             ESENCIA
           </span>
-        </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="nav-desktop" style={{ gap: '30px', alignItems: 'center' }}>
@@ -153,10 +155,12 @@ export const Navbar = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
-          <div style={{
+          <a href="#inicio" onClick={() => setIsOpen(false)} style={{
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
+            textDecoration: 'none',
+            cursor: 'pointer',
           }}>
             <img src={logoImg} alt="Esencia Logo" style={{
               height: '32px',
@@ -172,7 +176,7 @@ export const Navbar = () => {
             }}>
               ESENCIA
             </span>
-          </div>
+          </a>
           <button
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
