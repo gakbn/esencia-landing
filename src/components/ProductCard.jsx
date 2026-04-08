@@ -19,11 +19,11 @@ export const ProductCard = ({ product }) => {
       transition: 'box-shadow 0.3s ease, transform 0.3s ease',
     }}>
       {/* Image with category badge */}
-      <div style={{ position: 'relative', height: 'clamp(180px, 30vw, 240px)' }}>
+      <div style={{ position: 'relative', height: 'clamp(260px, 44vw, 350px)' }}>
         <img 
           src={product.image} 
           alt={product.name} 
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} 
         />
         {/* Subtle gradient overlay at bottom of image */}
         <div style={{
@@ -52,7 +52,7 @@ export const ProductCard = ({ product }) => {
       {/* Card body */}
       <div style={{ padding: 'clamp(18px, 3vw, 25px)', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
         <h3 style={{ 
-          margin: '0 0 10px 0', 
+          margin: '0 0 0px 0', 
           fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
           color: 'var(--color-negro)',
         }}>
